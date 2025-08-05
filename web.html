@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Car Dealer | Demo</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">ARS Title Demo</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Inventory</a>
+            <a href="#">Financing</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your Dream Car Awaits</h1>
+        <p>Find the perfect vehicle at unbeatable prices.</p>
+        <button class="cta-btn">View Inventory</button>
+    </section>
+
+    <!-- Disclaimer -->
+    <p class="disclaimer">This web page is for demo purposes only. All permissions of code and content belong strictly to Advanced Remarketing Services.</p>
+
+    <!-- Featured Cars -->
+    <section class="featured">
+        <h2>Featured Vehicles</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="images/sportscar.jpg" alt="Car 1">
+                <h3>2022 Tesla Model 3</h3>
+                <p>$45,000 | Electric | 12,000 miles</p>
+                <button>View Details</button>
+            </div>
+            <div class="car-card">
+                <img src="images/sportscar.jpg" alt="Car 2">
+                <h3>2021 Ford F-150</h3>
+                <p>$38,000 | Gas | 25,000 miles</p>
+                <button>View Details</button>
+            </div>
+            <div class="car-card">
+                <img src="images/sportscar.jpg" alt="Car 3">
+                <h3>2020 Toyota Camry</h3>
+                <p>$25,500 | Hybrid | 30,000 miles</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 AutoMax Demo | Advanced Remarketing Services</p>
+    </footer>
+    <!-- Chatbot Widget -->
+<div class="chatbot-container">
+    <div class="chatbot-header">AI Assistant</div>
+    <div class="chatbot-body" id="chatbot-body">
+        <div class="bot-message">Hey there! I am your virtual assistant. What can I help you with today?</div>
+    </div>
+    <div class="chatbot-footer">
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<div class="chatbot-toggle" id="chatbot-toggle">🤖</div>
+
+<script src="webbot.js"></script>
+</body>
+</html>

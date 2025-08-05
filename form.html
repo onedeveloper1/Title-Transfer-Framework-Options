@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Vehicle Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Vehicle Information Form</h2>
+        <p class="disclaimer">This form is for demo purposes only. All permissions of code and content belong strictly to Advanced Remarketing Services.</p>
+        
+        <form>
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+            
+            <!-- Street Address -->
+            <label for="address">Street Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <!-- City -->
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            
+            <!-- State Dropdown -->
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value="">Select State</option>
+                <option value="AL">Alabama (AL)</option>
+                <option value="AK">Alaska (AK)</option>
+                <option value="AZ">Arizona (AZ)</option>
+                <option value="AR">Arkansas (AR)</option>
+                <option value="CA">California (CA)</option>
+            </select>
+            
+            <!-- VIN (optional) -->
+            <label for="vin">VIN (optional):</label>
+            <input type="text" id="vin" name="vin">
+            
+            <!-- Title Status -->
+            <label for="title-status">Title Status:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="title" value="Yes"> Yes, I have a title for the vehicle</label>
+                <label><input type="radio" name="title" value="No"> No, the vehicle currently does not have a title</label>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+        
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+    <!-- Chatbot Widget -->
+<div class="chatbot-container">
+    <div class="chatbot-header">Title Tina</div>
+    <div class="chatbot-body" id="chatbot-body">
+        <div class="bot-message">Hey there! I am here to help you on your title transfer journey! Let me know if you have any questions!</div>
+    </div>
+    <div class="chatbot-footer">
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<div class="chatbot-toggle" id="chatbot-toggle">🤖</div>
+<script>
+    // Chatbot Toggle
+const chatbotToggle = document.getElementById('chatbot-toggle');
+const chatbotContainer = document.querySelector('.chatbot-container');
+const sendBtn = document.getElementById('send-btn');
+const userInput = document.getElementById('user-input');
+const chatbotBody = document.getElementById('chatbot-body');
+
+chatbotToggle.addEventListener('click', () => {
+    chatbotContainer.style.display = chatbotContainer.style.display === 'flex' ? 'none' : 'flex';
+});
+
+sendBtn.addEventListener('click', () => {
+    const userText = userInput.value.trim();
+    if (userText) {
+        appendMessage(userText, 'user');
+        userInput.value = '';
+
+        // Mock bot response
+        setTimeout(() => {
+            appendMessage("I'm just a demo bot. We'll add real AI soon!", 'bot');
+        }, 1000);
+    }
+});
+
+function appendMessage(text, sender) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+    messageDiv.innerText = text;
+    chatbotBody.appendChild(messageDiv);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+}
+</script>
+</body>
+</html>

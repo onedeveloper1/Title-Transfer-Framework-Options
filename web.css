@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+    text-align: center;
+    color: black;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    background: #ffcc00;
+    color: #333;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.cta-btn:hover {
+    background: #ffb700;
+}
+
+.disclaimer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin: 15px;
+}
+
+.featured {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.car-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.car-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+}
+
+.car-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.car-card h3 {
+    margin: 10px 0;
+}
+
+.car-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.car-card button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.car-card button:hover {
+    background: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #007bff;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.chatbot-header {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.chatbot-body {
+    height: 250px;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.bot-message, .user-message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 80%;
+    clear: both;
+}
+
+.bot-message {
+    background: #e9ecef;
+    float: left;
+}
+
+.user-message {
+    background: #007bff;
+    color: #fff;
+    float: right;
+}
+
+.chatbot-footer {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chatbot-footer input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.chatbot-footer button {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.chatbot-footer button:hover {
+    background: #0056b3;
+}
+
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.chatbot-toggle:hover {
+    background: #0056b3;
+}
